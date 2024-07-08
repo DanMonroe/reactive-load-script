@@ -1,6 +1,6 @@
 {
   "name": "reactive-load-script",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default blueprint for Embroider v2 addons.",
   "keywords": [
     "ember-addon"
@@ -112,7 +112,8 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
-      "./components/foo.js": "./dist/_app_/components/foo.js"
+      "./components/foo.js": "./dist/_app_/components/foo.js",
+      "./services/load-script.js": "./dist/_app_/services/load-script.js"
     }
   }
 }
