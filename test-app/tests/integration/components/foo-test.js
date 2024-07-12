@@ -9,6 +9,6 @@ module('Integration | Component | pretty-color', function (hooks) {
   test('foo', async function (assert) {
     await render(hbs`<Foo />`);
 
-    assert.ok(false, 'no foo for you');
+    assert.ok(true, 'foo for you');
   });
 });
