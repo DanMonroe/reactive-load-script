@@ -32,18 +32,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "concurrently 'yarn:build:*'",
+    "build": "concurrently 'pnpm:build:*'",
     "build:js": "rollup --config",
     "build:types": "glint --declaration",
-    "lint": "concurrently 'yarn:lint:*(!fix)' --names 'lint:'",
-    "lint:fix": "concurrently 'yarn:lint:*:fix' --names 'fix:'",
+    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
     "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
     "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "glint",
-    "prepack": "concurrently 'yarn:build:*'",
-    "start": "concurrently 'yarn:start:*'",
+    "prepack": "concurrently 'pnpm:build:*'",
+    "start": "concurrently 'pnpm:start:*'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
@@ -57,6 +57,7 @@
     "@babel/plugin-transform-typescript": "^7.24.4",
     "@babel/runtime": "^7.24.4",
     "@embroider/addon-dev": "^4.3.1",
+    "@glimmer/tracking": "^1.1.2",
     "@glint/core": "^1.4.0",
     "@glint/environment-ember-loose": "^1.4.0",
     "@glint/environment-ember-template-imports": "^1.4.0",
@@ -111,6 +112,8 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.cjs",
-    "app-js": {}
+    "app-js": {
+      "./services/load-script.js": "./dist/_app_/services/load-script.js"
+    }
   }
 }

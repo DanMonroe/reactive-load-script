@@ -74,27 +74,5 @@ module.exports = {
         // Add any custom rules here
       },
     },
-    // node files
-    {
-      files: [
-        './.eslintrc.cjs',
-        './.prettierrc.cjs',
-        './.template-lintrc.cjs',
-        './addon-main.cjs',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-      env: {
-        browser: false,
-        node: true,
-      },
-      plugins: ['n'],
-      extends: [
-        'eslint:recommended',
-        'plugin:n/recommended',
-        'plugin:prettier/recommended',
-      ],
-    },
   ],
 };

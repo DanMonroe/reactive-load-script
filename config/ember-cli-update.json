@@ -12,7 +12,7 @@
           "options": [
             "--ci-provider=github",
             "--typescript",
-            "--yarn"
+            "--pnpm"
           ]
         }
       ]
