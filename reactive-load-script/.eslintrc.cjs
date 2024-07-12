@@ -23,12 +23,6 @@ module.exports = {
         'import/extensions': ['error', 'always', { ignorePackages: true }],
         // Add any custom rules here
       },
-      'prettier/prettier': [
-        'error',
-        {
-          printWidth: 100,
-        },
-      ],
     },
     // ts files
     {
@@ -79,28 +73,6 @@ module.exports = {
         'import/extensions': ['error', 'always', { ignorePackages: true }],
         // Add any custom rules here
       },
-    },
-    // node files
-    {
-      files: [
-        './.eslintrc.cjs',
-        './.prettierrc.cjs',
-        './.template-lintrc.cjs',
-        './addon-main.cjs',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-      env: {
-        browser: false,
-        node: true,
-      },
-      plugins: ['n'],
-      extends: [
-        'eslint:recommended',
-        'plugin:n/recommended',
-        'plugin:prettier/recommended',
-      ],
     },
   ],
 };

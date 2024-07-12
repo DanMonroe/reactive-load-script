@@ -3,7 +3,8 @@ import { tracked } from '@glimmer/tracking';
 
 type ErrorState = ErrorEvent | null;
 
-const isBrowser = typeof window !== 'undefined' && typeof window.document !== 'undefined';
+const isBrowser =
+  typeof window !== 'undefined' && typeof window.document !== 'undefined';
 
 export class Script {
   @tracked src: string | undefined = undefined;
