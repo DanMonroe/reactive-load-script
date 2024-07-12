@@ -23,6 +23,12 @@ module.exports = {
         'import/extensions': ['error', 'always', { ignorePackages: true }],
         // Add any custom rules here
       },
+      'prettier/prettier': [
+        'error',
+        {
+          printWidth: 100,
+        },
+      ],
     },
     // ts files
     {
