@@ -113,7 +113,6 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
-      "./components/foo.js": "./dist/_app_/components/foo.js",
       "./services/load-script.js": "./dist/_app_/services/load-script.js"
     }
   }
