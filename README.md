@@ -4,7 +4,7 @@
 
 ## Compatibility
 
-- Ember.js v4.12 or above
+- Ember.js v3.28 or above
 - Embroider or ember-auto-import v2
 
 ## Installation
