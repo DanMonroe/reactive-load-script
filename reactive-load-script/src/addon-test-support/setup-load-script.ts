@@ -2,7 +2,7 @@ import { getContext, type TestContext } from '@ember/test-helpers';
 import LoadScriptService, {
   Script,
 } from 'reactive-load-script/services/load-script';
-import type { PlainObject } from 'reactive-load-script';
+import type { PlainObject } from '../../declarations';
 
 let loadScriptService: LoadScriptService | undefined;
 

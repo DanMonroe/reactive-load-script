@@ -1,6 +1,6 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import type { InjectScriptArgs } from 'reactive-load-script';
+import type { InjectScriptArgs } from '../../declarations';
 
 export const PREVENT_SCRIPT_LOADING_ID = '#prevent-script-loading';
 
