@@ -149,3 +149,9 @@ export default class LoadScriptService extends Service {
     }
   }
 }
+
+declare module '@ember/service' {
+  interface Registry {
+    loadScriptService: LoadScriptService;
+  }
+}

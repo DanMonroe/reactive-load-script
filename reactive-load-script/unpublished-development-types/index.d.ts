@@ -4,6 +4,8 @@
 import '@glint/environment-ember-loose';
 import '@glint/environment-ember-template-imports';
 
+declare module 'reactive-load-script/services/load-script';
+
 declare module '@glint/environment-ember-loose/registry' {
   // Remove this once entries have been added! 👇
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
