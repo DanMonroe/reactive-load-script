@@ -40,22 +40,10 @@ importers:
         version: 7.24.4
       '@embroider/addon-dev':
         specifier: ^4.3.1
-        version: 4.3.1(@glint/template@1.4.0)(rollup@4.16.4)
+        version: 4.3.1(rollup@4.16.4)
       '@glimmer/tracking':
         specifier: ^1.1.2
         version: 1.1.2
-      '@glint/core':
-        specifier: ^1.4.0
-        version: 1.4.0(typescript@5.5.3)
-      '@glint/environment-ember-loose':
-        specifier: ^1.4.0
-        version: 1.4.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(@types/ember__array@4.0.10)(@types/ember__component@4.0.22)(@types/ember__controller@4.0.12)(@types/ember__object@4.0.12)(@types/ember__routing@4.0.22)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.2.0)
-      '@glint/environment-ember-template-imports':
-        specifier: ^1.4.0
-        version: 1.4.0(@glint/environment-ember-loose@1.4.0)(@glint/template@1.4.0)(@types/ember__component@4.0.22)(@types/ember__helper@4.0.8)(@types/ember__modifier@4.0.9)(@types/ember__routing@4.0.22)
-      '@glint/template':
-        specifier: ^1.4.0
-        version: 1.4.0
       '@rollup/plugin-babel':
         specifier: ^6.0.4
         version: 6.0.4(@babel/core@7.24.7)(rollup@4.16.4)
@@ -137,6 +125,9 @@ importers:
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
+      ember-qunit:
+        specifier: ^8.1.0
+        version: 8.1.0(@ember/test-helpers@3.3.0)(@glint/template@1.4.0)(ember-source@5.10.0)(qunit@2.21.0)
       ember-template-lint:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1912,12 +1903,12 @@ packages:
       - supports-color
     dev: true
 
-  /@embroider/addon-dev@4.3.1(@glint/template@1.4.0)(rollup@4.16.4):
+  /@embroider/addon-dev@4.3.1(rollup@4.16.4):
     resolution: {integrity: sha512-CNZ4Y69PPIZAAGGoERjvDcrwOwWTuUmnRYu+XnmqKk0opdlu/PTssO9YWyxp8AnvGd2l7iLCjEn5mpLFvifstA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     dependencies:
-      '@embroider/core': 3.4.14(@glint/template@1.4.0)
+      '@embroider/core': 3.4.14
       '@rollup/pluginutils': 4.2.1
       content-tag: 2.0.1
       fs-extra: 10.1.0
@@ -1945,7 +1936,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@embroider/core@3.4.14(@glint/template@1.4.0):
+  /@embroider/core@3.4.14:
     resolution: {integrity: sha512-WVVKup9j1LzciQDL3jfvADJIyLTPe3+cWKzZwqwSnDkYIx2Nsq5a/drKcjJZPJtwU1ddbMpDnUVgGtOurN1VcA==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
@@ -2433,34 +2424,6 @@ packages:
       '@types/ember__routing': 4.0.22(@babel/core@7.24.7)
       ember-cli-htmlbars: 6.3.0
       ember-modifier: 4.2.0(@babel/core@7.24.7)(ember-source@5.10.0)
-    dev: true
-
-  /@glint/environment-ember-template-imports@1.4.0(@glint/environment-ember-loose@1.4.0)(@glint/template@1.4.0)(@types/ember__component@4.0.22)(@types/ember__helper@4.0.8)(@types/ember__modifier@4.0.9)(@types/ember__routing@4.0.22):
-    resolution: {integrity: sha512-VXcUgea92l7NFShU26rpQn+hYUZ7ex/rNtU9vnw2BAVZaPfxZROokW8ABj8aMaCUDe60CoMVZ1/QSeONSCln3w==}
-    peerDependencies:
-      '@glint/environment-ember-loose': ^1.4.0
-      '@glint/template': ^1.4.0
-      '@types/ember__component': ^4.0.10
-      '@types/ember__helper': ^4.0.1
-      '@types/ember__modifier': ^4.0.3
-      '@types/ember__routing': ^4.0.12
-    peerDependenciesMeta:
-      '@types/ember__component':
-        optional: true
-      '@types/ember__helper':
-        optional: true
-      '@types/ember__modifier':
-        optional: true
-      '@types/ember__routing':
-        optional: true
-    dependencies:
-      '@glint/environment-ember-loose': 1.4.0(@glimmer/component@1.1.2)(@glint/template@1.4.0)(@types/ember__array@4.0.10)(@types/ember__component@4.0.22)(@types/ember__controller@4.0.12)(@types/ember__object@4.0.12)(@types/ember__routing@4.0.22)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.2.0)
-      '@glint/template': 1.4.0
-      '@types/ember__component': 4.0.22(@babel/core@7.24.7)
-      '@types/ember__helper': 4.0.8(@babel/core@7.24.7)
-      '@types/ember__modifier': 4.0.9(@babel/core@7.24.7)
-      '@types/ember__routing': 4.0.22(@babel/core@7.24.7)
-      content-tag: 2.0.1
     dev: true
 
   /@glint/template@1.4.0:
