@@ -1,8 +1,12 @@
 {
   "private": true,
-  "repository": "",
+  "repository": "https://github.com/Addepar/reactive-load-script",
   "license": "MIT",
   "author": "",
+  "workspaces": [
+    "reactive-load-script",
+    "test-app"
+  ],
   "scripts": {
     "build": "pnpm --filter reactive-load-script build",
     "lint": "pnpm --filter '*' lint",

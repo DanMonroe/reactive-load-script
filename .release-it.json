@@ -3,8 +3,7 @@
     "release-it-pnpm": {}
   },
   "git": {
-    "commitMessage": "chore: release ${version}",
-    "requireBranch": "main",
+    "commitMessage": "Release reactive-load-script ${version}",
     "tagName": "v${version}"
   },
   "github": {
@@ -19,7 +18,7 @@
     "@release-it-plugins/workspaces": {
       "publish": false,
       "workspaces": [
-        "@addepar/reactive-load-script"
+        "reactive-load-script"
       ],
       "additionalManifests": {
         "dependencyUpdates": [
@@ -31,11 +30,6 @@
           "test-app/package.json"
         ]
       }
-    },
-    "release-it-pnpm": {
-      "disableRelease": true,
-      "inFile": "CHANGELOG.md",
-      "publishCommand": "pnpm -r publish --no-git-checks --tag $tag"
     }
   }
 }
