@@ -1,0 +1,41 @@
+{
+  "plugins": {
+    "release-it-pnpm": {}
+  },
+  "git": {
+    "commitMessage": "chore: release ${version}",
+    "requireBranch": "main",
+    "tagName": "v${version}"
+  },
+  "github": {
+    "release": true,
+    "tokenRef": "GITHUB_AUTH"
+  },
+  "plugins": {
+    "@release-it-plugins/lerna-changelog": {
+      "infile": "CHANGELOG.md",
+      "launchEditor": false
+    },
+    "@release-it-plugins/workspaces": {
+      "publish": false,
+      "workspaces": [
+        "@addepar/reactive-load-script"
+      ],
+      "additionalManifests": {
+        "dependencyUpdates": [
+          "package.json",
+          "test-app/package.json"
+        ],
+        "versionUpdates": [
+          "package.json",
+          "test-app/package.json"
+        ]
+      }
+    },
+    "release-it-pnpm": {
+      "disableRelease": true,
+      "inFile": "CHANGELOG.md",
+      "publishCommand": "pnpm -r publish --no-git-checks --tag $tag"
+    }
+  }
+}
