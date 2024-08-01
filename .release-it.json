@@ -4,16 +4,25 @@
   },
   "git": {
     "commitMessage": "Release reactive-load-script ${version}",
+    "requireBranch": "main",
     "tagName": "v${version}"
   },
   "github": {
     "release": true,
     "tokenRef": "GITHUB_AUTH"
   },
+  "npm": {
+    "release": true
+  },
+  "hooks": {
+    "before:init": [
+      "git pull", "pnpm lint", "pnpm test"
+    ]
+  },
   "plugins": {
     "@release-it-plugins/lerna-changelog": {
       "infile": "CHANGELOG.md",
-      "launchEditor": false
+      "launchEditor": true
     },
     "@release-it-plugins/workspaces": {
       "publish": false,
