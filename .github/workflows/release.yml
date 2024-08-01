@@ -6,7 +6,16 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         uses: actions/checkout@v4
-      - name: Install Dependencies
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
         run: pnpm install
       - name: End message
         run: echo 'Done!'
