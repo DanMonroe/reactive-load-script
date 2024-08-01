@@ -17,5 +17,18 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Initialize Git User
+        run: |
+          git config --global user.email "danmonroe67+npm@gmail.com"
+          git config --global user.name "Release workflow"
+      - name: Initialize NPM
+        run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Run releae
+        run: npm run release -ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: End message
         run: echo 'Done!'
