@@ -1,6 +1,6 @@
 {
   "private": true,
-  "repository": "https://github.com/Addepar/reactive-load-script",
+  "repository": "https://github.com/DanMonroe/reactive-load-script.git",
   "license": "MIT",
   "author": "",
   "workspaces": [
